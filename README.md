@@ -1,4 +1,4 @@
-# RubyRecord
+# Orb
 
 ## Summary
 
@@ -51,7 +51,7 @@ through the SQLite3 gem. This is done through DBConnection::open(db_file_name)
 which instantiates a singleton of SQLite3::Database.
 
 DBConnection uses native SQLite3::Database methods as `#execute`, `#execute2`,
-and `#last_insert_row_id` to allow RubyRecord to perform SQL queries in the
+and `#last_insert_row_id` to allow Orb to perform SQL queries in the
 form of heredocs.
 
 SQLObject gives the user a plethora of ActiveRecord methods and association
