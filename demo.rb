@@ -1,16 +1,16 @@
 require_relative 'lib/sql_object'
 
-DEMO_DB_FILE = 'cats.db'
-DEMO_SQL_FILE = 'cats.sql'
+DEMO_DB_FILE = 'dragons.db'
+DEMO_SQL_FILE = 'dragons.sql'
 
 # SCHEMA
-# Cat
+# Dragon
 # Columns: 'id', 'name', 'owner_id'
 #
-# Human
-# Columns: 'id', 'fname', 'lname', 'house_id'
+# Trainer
+# Columns: 'id', 'fname', 'lname', 'hideout_id'
 #
-# House
+# Hideout
 # Columns: 'id', 'address'
 
 `rm '#{DEMO_DB_FILE}'`
@@ -18,25 +18,25 @@ DEMO_SQL_FILE = 'cats.sql'
 
 DBConnection.open(DEMO_DB_FILE)
 
-class Cat < SQLObject
-  belongs_to :human, foreign_key: :owner_id
-  has_one_through :house, :human, :house
+class Dragon < SQLObject
+  belongs_to :trainer, foreign_key: :owner_id
+  has_one_through :hideout, :trainer, :hideout
 
   finalize!
 end
 
-class Human < SQLObject
-  self.table_name = "humans"
-  has_many :cats, foreign_key: :owner_id
-  belongs_to :house
+class Trainer < SQLObject
+  self.table_name = "trainers"
+  has_many :dragons, foreign_key: :owner_id
+  belongs_to :hideout
 
   finalize!
 end
 
-class House < SQLObject
-  has_many :humans,
-    class_name: "Humans",
-    foreign_key: :house_id,
+class Hideout < SQLObject
+  has_many :trainers,
+    class_name: "Trainer",
+    foreign_key: :hideout_id,
     primary_key: :id
 
   finalize!

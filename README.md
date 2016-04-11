@@ -23,7 +23,7 @@ readability and DRYness of your code.
 ## Features
 
 - Intuitive API for ease-of-use.
-- Implements core functionality of ActiveRecord::Base
+- Implements similar core functionality of ActiveRecord::Base
 - Provides logical syntax and follows Ruby conventions.
 - Follows the well-loved 'convention over configuration' mantra for naming
 when setting associations. e.g Will search schema for "houses" table if "House"
@@ -32,13 +32,13 @@ class.
 
 ## API
 
-SQLObject provides core ActiveRecord associations:
+SQLObject provides similar core ActiveRecord associations:
 
 - `has_many`
 - `belongs_to`
 - `has_one_through`
 
-SQLObject provides core ActiveRecord methods:
+SQLObject provides similar core ActiveRecord methods:
 
 - `::find`
 - `::where`
