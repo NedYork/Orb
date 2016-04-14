@@ -12,7 +12,7 @@ readability and DRYness of your code.
 
 1. Clone the repo
 2. Load `irb` or `pry` in terminal
-3. Run 'load './demo.rb''
+3. Run `load './demo.rb'`
 4. Go wild (using demo.rb as a reference)
 
 ## Libraries
@@ -56,6 +56,6 @@ form of heredocs.
 
 SQLObject gives the user a plethora of ActiveRecord methods and association
 methods which maps to SQL queries. The Associatable module extends SQLObject to
-allow for associations such as 'has_many', 'belongs_to', 'has_one_through' to be
+allow for associations such as `has_many`, `belongs_to`, `has_one_through` to be
 made. These associations provide sensible default class_name, foreign_key, and
 primary_key values if not provided by user.

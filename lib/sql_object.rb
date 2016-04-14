@@ -14,7 +14,6 @@ class SQLObject
         #{self.table_name}
     SQL
     @columns.first.map!(&:to_sym)
-    # double check this guy later to learn more
   end
 
   def self.finalize!
